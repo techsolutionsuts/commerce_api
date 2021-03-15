@@ -1,20 +1,20 @@
 <h1>The Completed API Test</h1>
 
-<p style="text-decoration: underline"> Below are the endpoints </p>
+<h2 style="text-decoration: underline"> Below are the endpoints </h2>
 
 <h3>Categories endpoint </h3>
 
-Get all categories
+<p>Get all categories</p>
 <label>Method: GET || http://localhost:8000/api/categories</label>
 
-Post category
+<p>Post category</p>
 <label>Method: POST || http://localhost:8000/api/categories || field_name {name:required}</label>
 
-Update category
-<label>Method: PUT || http://localhost:8000/api/categories/id || parameter {id} || field_name {name}</label>
+<p>Update category</p>
+<label>Method: PUT || http://localhost:8000/api/categories/id || parameter {id:required} || field_name {name}</label>
 
-Delete category
-<label>Method: DELETE || http://localhost:8000/api/categories/id || parameter {id}</label>
+<p>Delete category</p>
+<label>Method: DELETE || http://localhost:8000/api/categories/id || parameter {id:required}</label>
 
 <hr>
 
@@ -23,11 +23,11 @@ Delete category
 Get all items with it's category objects
 <label>Method: GET || http://localhost:8000/api/items</label>
 
-Post item
+<p>Post item</p>
 <label>Method: POST || http://localhost:8000/api/items || field_name {category_id:required, title:required, price:required, description:required}</label>
 
-Update item
-<label>Method: PUT || http://localhost:8000/api/items/id || parameter {id} || field_name {category_id, title, price, description} any of the fields will update the item</label>
+<p>Update item</p>
+<label>Method: PUT || http://localhost:8000/api/items/id || parameter {id:required} || field_name {category_id, title, price, description} any of the fields will update the item</label>
 
-Delete item
-<label>Method: DELETE || http://localhost:8000/api/items/id || parameter {id}</label>
+<p>Delete item</p>
+<label>Method: DELETE || http://localhost:8000/api/items/id || parameter {id:required}</label>
