@@ -4,10 +4,10 @@
 
 <h3>Categories endpoint </h3>
 
-<p>Get all categories</p>
+<h4>Get all categories</h4>
 <label>Method: GET || http://localhost:8000/api/categories</label>
 
-<p>Post category</p>
+<h4>Post category</h4>
 <label>Method: POST || http://localhost:8000/api/categories || field_name {name:required}</label>
 
 <p>Update category</p>
