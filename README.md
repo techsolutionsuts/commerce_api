@@ -8,12 +8,12 @@
 <label>Method: GET || http://localhost:8000/api/categories</label>
 
 <h4>Post category</h4>
-<label>Method: POST || http://localhost:8000/api/categories || field_name {name:required}</label>
+<label>Method: POST || <a href="http://localhost:8000/api/categories">http://localhost:8000/api/categories</a> || field_name {name:required}</label>
 
-<p>Update category</p>
-<label>Method: PUT || http://localhost:8000/api/categories/id || parameter {id:required} || field_name {name}</label>
+<h4>Update category</h4>
+<label>Method: PUT || <a href="#">http://localhost:8000/api/categories/id</a> || parameter {id:required} || field_name {name}</label>
 
-<p>Delete category</p>
+<h4>Delete category</h4>
 <label>Method: DELETE || http://localhost:8000/api/categories/id || parameter {id:required}</label>
 
 <hr>
@@ -23,11 +23,14 @@
 Get all items with it's category objects
 <label>Method: GET || http://localhost:8000/api/items</label>
 
-<p>Post item</p>
+<h4>Post item</h4>
 <label>Method: POST || http://localhost:8000/api/items || field_name {category_id:required, title:required, price:required, description:required}</label>
 
-<p>Update item</p>
+<h4>Update item</h4>
 <label>Method: PUT || http://localhost:8000/api/items/id || parameter {id:required} || field_name {category_id, title, price, description} any of the fields will update the item</label>
 
-<p>Delete item</p>
+<h4>Delete item</h4>
 <label>Method: DELETE || http://localhost:8000/api/items/id || parameter {id:required}</label>
+
+
+<>
