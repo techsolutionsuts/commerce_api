@@ -38,6 +38,6 @@ Get all items with it's category objects
 <p>NOTE: if you are using Postman, please select x-www-form-urlencoded for PUT and form-data for POST</p>
 
 <h3>Thank you and have a great time</h3>
-Adamu, Mohammed
-0541708169
-adamuips@gmail.com
+<p>Adamu, Mohammed</p>
+<p>0541708169</p>
+<p>adamuips@gmail.com</p>
