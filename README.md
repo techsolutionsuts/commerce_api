@@ -11,26 +11,30 @@
 <label>Method: POST || <a href="http://localhost:8000/api/categories">http://localhost:8000/api/categories</a> || field_name {name:required}</label>
 
 <h4>Update category</h4>
-<label>Method: PUT || <a href="#">http://localhost:8000/api/categories/id</a> || parameter {id:required} || field_name {name}</label>
+<label>Method: PUT || <a href="http://localhost:8000/api/categories/id"></a> || parameter {id:required} || field_name {name}</label>
 
 <h4>Delete category</h4>
-<label>Method: DELETE || http://localhost:8000/api/categories/id || parameter {id:required}</label>
+<label>Method: DELETE || <a href="http://localhost:8000/api/categories/id"></a> || parameter {id:required}</label>
 
 <hr>
 
 <h3>Items endpoint </h3>
 
 Get all items with it's category objects
-<label>Method: GET || http://localhost:8000/api/items</label>
+<label>Method: GET || <a href="http://localhost:8000/api/items"></a></label>
 
 <h4>Post item</h4>
-<label>Method: POST || http://localhost:8000/api/items || field_name {category_id:required, title:required, price:required, description:required}</label>
+<label>Method: POST || <a href="http://localhost:8000/api/items"></a> || field_name {category_id:required, title:required, price:required, description:required}</label>
 
 <h4>Update item</h4>
-<label>Method: PUT || http://localhost:8000/api/items/id || parameter {id:required} || field_name {category_id, title, price, description} any of the fields will update the item</label>
+<label>Method: PUT || <a href="http://localhost:8000/api/items/id || parameter {id:required} || field_name {category_id, title, price, description} any of the fields will update the item</label>
 
 <h4>Delete item</h4>
-<label>Method: DELETE || http://localhost:8000/api/items/id || parameter {id:required}</label>
+<label>Method: DELETE || <a href="http://localhost:8000/api/items/id || parameter {id:required}</label>
 
 
-<>
+<h3>You can simply import the file named: "Commerce_api.postman_collection.json" in the root folder into Postman and skip the above process</h3>
+
+<p>NOTE: if you are using Postman, please select x-www-form-urlencoded for PUT and form-data for POST</p>
+
+Thank you and have a great time
