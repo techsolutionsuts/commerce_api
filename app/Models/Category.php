@@ -12,7 +12,7 @@ class Category extends Model
     // protected $fillable = ['name'];
     protected $guarded = [];
 
-    public function category_item()
+    public function items()
     {
         return $this->hasMany(Item::class);
     }

@@ -6,7 +6,7 @@ use App\Models\Category;
 use App\Models\Item;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-
+use stdClass;
 
 class ItemsController extends Controller
 {
@@ -18,11 +18,25 @@ class ItemsController extends Controller
     public function index()
     {
         $items = Item::all();
+
+        $dataArray = [];
+
         foreach($items as $item){
-        $item->item_category;
+
+            $data = new stdClass;
+            $data->id = $item->id;
+            // $data->category_id = $item->category_id;
+            $data->title = $item->title;
+            $data->price = $item->price;
+            $data->description = $item->description;
+            $data->created_at = $item->created_at;
+            $data->updated_at = $item->updated_at;
+            $data->category = $item->category;
+
+            array_push($dataArray,$data);
         }
 
-        return response()->json(['data' => $items], 200);
+        return response()->json(['data' => $dataArray], 200);
     }
 
     /**
@@ -51,8 +65,20 @@ class ItemsController extends Controller
         return response()->json(['errors'=>$validate->errors()], 422);
     }
     else{
-    $item = $category->category_item()->create($request->all());
-        return response()->json(['ok'=>'Created', 'data' => $item->toArray()], 201);
+        $item = $category->items()->create($request->all());
+
+            $data = new stdClass;
+            $data->id = $item->id;
+            // $data->category_id = $item->category_id;
+            $data->title = $item->title;
+            $data->price = $item->price;
+            $data->description = $item->description;
+            $data->created_at = $item->created_at;
+            $data->updated_at = $item->updated_at;
+            $data->category = $item->category;
+
+
+        return response()->json(['ok'=>'Created', 'data' => $data], 201);
     }
 
     }
@@ -118,8 +144,24 @@ class ItemsController extends Controller
             if($item){
                 $item->fill($request->all());
                 $item->category_id = ($request->category_id)? $request->category_id : $item->category_id;
-                $item->item_category->push();
-                return response()->json(['ok'=>'Updated', 'data' => $item], 201);
+                $item->category->push();
+
+                $data = new stdClass;
+                // $dataArray = [];
+
+                $data->id = $item->id;
+                // $data->category_id = $item->category_id;
+                $data->title = $item->title;
+                $data->price = $item->price;
+                $data->description = $item->description;
+                $data->created_at = $item->created_at;
+                $data->updated_at = $item->updated_at;
+                $data->category = $item->category;
+
+                // array_push($dataArray,$data);
+                // $data = new stdClass;
+
+                return response()->json(['ok'=>'Updated', 'data' => $data], 201);
 
             }else{
                 return response()->json(['errors' => 'Item not found'], 404);
